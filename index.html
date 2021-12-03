@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Web Desing</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h2>ENTROZ</h2>
+        </div>
+        <nav>
+            <ul>
+                <li>About Us</li>
+                <li>Service</li>
+                <li>Blog</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <button class="btn_logIn" id="btnModal">
+            Log in
+        </button>
+    </header>
+
+    <div id="myModal" class="modalContainer">
+        <div class="modal_content">
+            <span class="close"><i class="far fa-times-circle"></i></span> 
+            <div class="modal_login_form_cont">
+                <h2>Login</h2>
+                <form class="modal_login_form">
+                    <label class="label_style" htmlFor="us">Username</label>
+                    <input class="input_field_style" id="us" type="text" placeholder="Type your username" />
+
+                    <label class="label_style" htmlFor="us">Password</label>
+                    <input class="input_field_style" id="us" type="text" placeholder="Type your password" />
+
+                    <button class="modal_btn_login">LOGIN</button>
+                </form>
+
+                <div class="modal_social">
+                    <h6>or sing in using</h6>
+                    <div class="icon_modal">
+                        <div class="icon_style"><i class="fab fa-twitter"></i></div>
+                        <div class="icon_style"><i class="fab fa-instagram"></i></div>
+                        <div class="icon_style"><i class="fab fa-facebook-f"></i></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="main_content">
+        <h1>We create attractive websites</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas officiis, 
+            reiciendis suscipit ad exercitationem unde? Voluptates illo qui labore perspiciatis? Lorem ipsum 
+            dolor sit amet consectetur adipisicing elit. Omnis et modi magnam id pariatur 
+            voluptatum ipsam nemo ab quos eius?</p>
+        <div class="btn_start">
+            Get Started
+        </div>
+    </section>
+
+    <section class="footer">
+        
+            <div class="icon_style"><i class="fab fa-twitter"></i></div>
+            <div class="icon_style"><i class="fab fa-instagram"></i></div>
+            <div class="icon_style"><i class="fab fa-facebook-f"></i></div>
+        
+    </section>
+    
+</body>
+
+<script>
+    if(document.getElementById("btnModal")){
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("btnModal");
+        var span = document.getElementsByClassName("close")[0];
+        var body = document.getElementsByTagName("body")[0];
+
+        btn.onclick = () =>{
+            modal.style.display = "block";
+            body.style.position = "static";
+            body.style.height = "100%";
+            body.style.overflow = "hidden"
+        }
+
+        span.onclick = function() {
+				modal.style.display = "none";
+				body.style.position = "inherit";
+				body.style.height = "auto";
+				body.style.overflow = "visible";
+		}
+
+        window.onclick = () =>{
+            if(event.target == modal) {
+                modal.style.display = "none";
+
+				body.style.position = "inherit";
+				body.style.height = "auto";
+				body.style.overflow = "visible";
+            }
+        }
+        
+    }
+</script>
+</html>
